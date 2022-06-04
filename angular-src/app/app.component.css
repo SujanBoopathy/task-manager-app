@@ -1,0 +1,14 @@
+body{
+    background-color:rgb(247, 249, 249);
+}
+table{
+width:70%;
+text-align: center;
+border-collapse: collapse;
+}
+table,tr,th,td{
+border:1px solid black;
+}
+#submitBtn{
+    margin-left: 10px;
+}

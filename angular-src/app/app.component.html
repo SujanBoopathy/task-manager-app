@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>system info</title>
+  </head>
+  <body>
+    <h1>System Information</h1>
+    
+    <div>
+      <form #monitor="ngForm" id="myform" (ngSubmit)="submit(from.value,to.value)">
+        From : <input type="date" #from name="fromDate" id="fromDate" value="dkdk" ngModel>
+        To : <input type="date" #to name="toDate" id="toDate">
+        <input type="submit" id="submitBtn" value="Find">
+      </form>
+    </div>
+    <br><br>
+    <div class="sysTable">
+      
+        <table class="table" id="tab">
+          <thead>
+            <tr>
+              <th>TimeMillis</th>
+              <th>DATE</th>
+              <th>CPU USAGE</th>
+              <th>MEMORY USAGE</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <tr *ngFor="let s of findEntry(posts)">
+              <td>{{s.currentTimeMillis}}</td>
+              <td>{{s.currentTimeMillis | date:'medium'}}</td>
+              <td>{{s.cpuUsage}}</td>
+              <td>{{s.memoryUsage}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+    </div>
+
+
+  </body>
+</html>
